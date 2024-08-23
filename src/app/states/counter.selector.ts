@@ -7,3 +7,8 @@ export const selectCount = createSelector(
     selectCounterState,
     (state) => state.count
 )
+
+export const selectCounterRange = createSelector(
+    selectCounterState,
+    (state) => state.counterRange
+)

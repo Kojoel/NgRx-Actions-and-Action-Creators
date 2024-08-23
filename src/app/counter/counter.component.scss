@@ -149,6 +149,14 @@
     border: none;
     background: rgb(22, 22, 22);
     color: palegoldenrod;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+.incrementby > button:hover {
+    border: 1px solid palegoldenrod;
+}
+.incrementby > button:focus {
+    border: 1px solid lightgreen;
 }
 
 
