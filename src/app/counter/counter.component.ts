@@ -15,6 +15,7 @@ import { counterRange, decrement, increment, reset, setCounterValue } from '../s
 })
 export class CounterComponent {
   value = 1;
+  incrementvalue = 1;
   count$: Observable<number> | undefined;
   counterRange$: Observable<number>;
 
@@ -39,7 +40,9 @@ export class CounterComponent {
     this.store.dispatch(setCounterValue({countValue: Number(num)}));
   }
 
-  setCounterRange(num: number) {
-    this.store.dispatch(counterRange({rangeObject:num}))
+  setCounterRange(event: Event) {
+    const element = event.target as HTMLButtonElement;
+    this.incrementvalue = parseInt(element.textContent || '');
+    this.store.dispatch(counterRange({rangeObject:this.incrementvalue}))
   }
 }

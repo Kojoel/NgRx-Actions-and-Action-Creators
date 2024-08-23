@@ -6,15 +6,15 @@
         <button class="btn-inc" (click)="increment()">+</button>
     </div>
     <div class="spec-value">
-        <label for="setCountValue">Enter specific value</label>
+        <label for="setCountValue">Set Initial Value</label>
         <input type="number" name="" id="setCountValue" #value (keyup)="setValue(value.value)">
     </div>
     <p class="increasebyrange">Increase by range</p>
     <div class="incrementby">
-        <button class="range-increments" name="range-increments" (click)="setCounterRange(1)">1</button>
-        <button class="range-increments" name="range-increments" (click)="setCounterRange(5)">5</button>
-        <button class="range-increments" name="range-increments" (click)="setCounterRange(50)">50</button>
-        <button class="range-increments" name="range-increments" (click)="setCounterRange(100)">100</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">1</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">5</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">50</button>
+        <button class="range-increments" name="range-increments" (click)="setCounterRange($event)">100</button>
     </div>
     <div class="refresh" (click)="reset()">
         Refresh
