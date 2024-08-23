@@ -2,15 +2,19 @@
     <p id="title">Counter App</p>
     <div class="container">
         <button class="btn-dec">-</button>
-        <div class="counter"></div>
+        <div class="counter">{{ count$ | async }}</div>
         <button class="btn-inc">+</button>
     </div>
     <div class="spec-value">
         <label for="setCountValue">Enter specific value</label>
         <input type="number" name="" id="setCountValue">
     </div>
+    <p class="increasebyrange">Increase by range</p>
     <div class="incrementby">
-        
+        <button class="range-increments">1</button>
+        <button class="range-increments">5</button>
+        <button class="range-increments">50</button>
+        <button class="range-increments">100</button>
     </div>
     <div class="refresh">
         Refresh
